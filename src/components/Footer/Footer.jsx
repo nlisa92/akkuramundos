@@ -26,7 +26,7 @@ function Footer() {
               aria-label="Akkuramundos home"
             >
               <img
-                src="/images/logo.png"
+                src="/akkuramundos/images/logo.png"
                 alt="Akkuramundos"
                 className="footer__logo-image"
               />

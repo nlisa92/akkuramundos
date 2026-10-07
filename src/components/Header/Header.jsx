@@ -29,7 +29,7 @@ function Header() {
           aria-label="Akkuramundos home"
         >
           <img
-            src={`${import.meta.env.BASE_URL}images/logo.png`}
+            src="/akkuramundos/images/logo.png"
             alt="Akkuramundos"
             className="header__logo-image"
           />
