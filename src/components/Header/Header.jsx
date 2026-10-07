@@ -21,7 +21,6 @@ function Header() {
   return (
     <header className="header">
       <div className="header__container">
-
         {/* Logo */}
         <NavLink
           to="/"
@@ -30,35 +29,24 @@ function Header() {
           aria-label="Akkuramundos home"
         >
           <img
-            src="/images/logo.png"
+            src={`${import.meta.env.BASE_URL}images/logo.png`}
             alt="Akkuramundos"
             className="header__logo-image"
           />
 
-          <span className="header__logo-text">
-            AKKURAMUNDOS
-          </span>
+          <span className="header__logo-text">AKKURAMUNDOS</span>
         </NavLink>
 
         {/* Desktop navigation */}
-        <nav
-          className="header__nav"
-          aria-label="Main navigation"
-        >
+        <nav className="header__nav" aria-label="Main navigation">
           {navigation.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
               end={item.path === "/"}
               className={({ isActive }) =>
-                `header__link ${
-                  item.isButton
-                    ? "header__contact-link"
-                    : ""
-                } ${
-                  isActive
-                    ? "header__link--active"
-                    : ""
+                `header__link ${item.isButton ? "header__contact-link" : ""} ${
+                  isActive ? "header__link--active" : ""
                 }`
               }
             >
@@ -74,25 +62,15 @@ function Header() {
               EN
             </button>
 
-            <span className="header__language-separator">
-              /
-            </span>
+            <span className="header__language-separator">/</span>
 
-            <button
-              type="button"
-              className="header__language"
-            >
+            <button type="button" className="header__language">
               ES
             </button>
 
-            <span className="header__language-separator">
-              /
-            </span>
+            <span className="header__language-separator">/</span>
 
-            <button
-              type="button"
-              className="header__language"
-            >
+            <button type="button" className="header__language">
               RU
             </button>
           </div>
@@ -102,18 +80,10 @@ function Header() {
         <button
           type="button"
           className={`header__menu-button ${
-            isMenuOpen
-              ? "header__menu-button--open"
-              : ""
+            isMenuOpen ? "header__menu-button--open" : ""
           }`}
-          onClick={() =>
-            setIsMenuOpen((prev) => !prev)
-          }
-          aria-label={
-            isMenuOpen
-              ? "Close menu"
-              : "Open menu"
-          }
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
         >
           <span />
@@ -124,15 +94,10 @@ function Header() {
         {/* Mobile navigation */}
         <div
           className={`header__mobile-menu ${
-            isMenuOpen
-              ? "header__mobile-menu--open"
-              : ""
+            isMenuOpen ? "header__mobile-menu--open" : ""
           }`}
         >
-          <nav
-            className="header__mobile-nav"
-            aria-label="Mobile navigation"
-          >
+          <nav className="header__mobile-nav" aria-label="Mobile navigation">
             {navigation.map((item) => (
               <NavLink
                 key={item.path}
@@ -140,14 +105,8 @@ function Header() {
                 end={item.path === "/"}
                 className={({ isActive }) =>
                   `header__mobile-link ${
-                    item.isButton
-                      ? "header__mobile-link--contact"
-                      : ""
-                  } ${
-                    isActive
-                      ? "header__mobile-link--active"
-                      : ""
-                  }`
+                    item.isButton ? "header__mobile-link--contact" : ""
+                  } ${isActive ? "header__mobile-link--active" : ""}`
                 }
                 onClick={closeMenu}
               >
@@ -166,24 +125,17 @@ function Header() {
 
             <span>/</span>
 
-            <button
-              type="button"
-              className="header__language"
-            >
+            <button type="button" className="header__language">
               ES
             </button>
 
             <span>/</span>
 
-            <button
-              type="button"
-              className="header__language"
-            >
+            <button type="button" className="header__language">
               RU
             </button>
           </div>
         </div>
-
       </div>
     </header>
   );
