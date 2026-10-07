@@ -1,0 +1,419 @@
+.header {
+  position: relative;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: #f7f5ef;
+  border-bottom: 1px solid #dedbd3;
+}
+
+.header__container {
+  width: min(100% - 48px, 1280px);
+  min-height: 72px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.header__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  color: #173951;
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+
+  text-decoration: none;
+  letter-spacing: 0.01em;
+
+  transition: opacity 0.2s ease;
+}
+
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__logo-image {
+  display: block;
+
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+.header__logo-text {
+  white-space: nowrap;
+}
+
+/* =========================================
+   DESKTOP NAVIGATION
+========================================= */
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 72px;
+
+  color: #173951;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.header__link:hover {
+  color: #c98b32;
+}
+
+.header__link--active {
+  color: #c98b32;
+}
+
+/* =========================================
+   CONTACT BUTTON
+========================================= */
+
+.header__contact-link {
+  min-height: 40px;
+  padding: 0 18px;
+
+  color: #ffffff;
+
+  background: #173951;
+
+  border: 1px solid #173951;
+}
+
+.header__contact-link:hover,
+.header__contact-link.header__link--active {
+  color: #ffffff;
+
+  background: #234c68;
+  border-color: #234c68;
+}
+
+/* =========================================
+   LANGUAGES
+========================================= */
+
+.header__languages {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-left: -4px;
+}
+
+.header__language {
+  padding: 0;
+
+  color: #173951;
+  background: transparent;
+
+  border: 0;
+  outline: 0;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.header__language:hover {
+  color: #c98b32;
+}
+
+.header__language--active {
+  color: #c98b32;
+}
+
+.header__language-separator {
+  color: #aaa69d;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+}
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.header__menu-button {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.header__menu-button span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  background: #173951;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.header__menu-button--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header__menu-button--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__menu-button--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.header__mobile-menu {
+  display: none;
+}
+
+.header__mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.header__mobile-link {
+  color: #173951;
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.header__mobile-link:hover,
+.header__mobile-link--active {
+  color: #c98b32;
+}
+
+.header__mobile-languages {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 28px;
+  padding-top: 22px;
+
+  border-top: 1px solid #dedbd3;
+
+  color: #aaa69d;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .header__nav {
+    gap: 20px;
+  }
+
+  .header__link {
+    font-size: 14px;
+  }
+
+  .header__logo {
+    font-size: 17px;
+    gap: 9px;
+  }
+
+  .header__logo-image {
+    width: 46px;
+    height: 46px;
+  }
+
+  .header__language {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .header__container {
+    width: min(100% - 40px, 1280px);
+  }
+
+  .header__nav {
+    gap: 14px;
+  }
+
+  .header__link {
+    font-size: 13px;
+  }
+
+  .header__logo {
+    font-size: 15px;
+    gap: 7px;
+  }
+
+  .header__logo-image {
+    width: 42px;
+    height: 42px;
+  }
+
+  .header__language {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+  .header__container {
+    width: calc(100% - 32px);
+    min-height: 64px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__menu-button {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .header__logo {
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .header__logo-image {
+    width: 42px;
+    height: 42px;
+  }
+
+  .header__mobile-menu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    padding: 30px 24px;
+
+    background: #f7f5ef;
+
+    border-bottom: 1px solid #dedbd3;
+
+    box-shadow: 0 10px 25px rgba(23, 57, 81, 0.08);
+  }
+
+  .header__mobile-menu--open {
+    display: block;
+  }
+
+  .header__mobile-nav {
+    gap: 22px;
+  }
+
+  .header__mobile-link {
+    font-size: 18px;
+  }
+
+  .header__mobile-languages {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+  .header__container {
+    width: calc(100% - 24px);
+  }
+
+  .header__logo {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .header__logo-image {
+    width: 38px;
+    height: 38px;
+  }
+
+  .header__menu-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__mobile-link {
+    font-size: 17px;
+  }
+}

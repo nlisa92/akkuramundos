@@ -1,0 +1,529 @@
+/* =========================================
+   STORIES
+========================================= */
+
+.stories {
+  width: 100%;
+
+  background: #f7f5ef;
+  color: #153750;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.stories__container {
+  width: min(100% - 48px, 1280px);
+  margin: 0 auto;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.stories__hero {
+  padding: 70px 0 72px;
+
+  background: #eef0ee;
+
+  border-bottom: 1px solid #dedbd3;
+}
+
+.stories__eyebrow {
+  margin: 0 0 18px;
+
+  color: #c98b32;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.stories__title {
+  max-width: 900px;
+
+  margin: 0;
+
+  color: #153750;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 6vw, 76px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.stories__description {
+  max-width: 700px;
+
+  margin: 30px 0 0;
+
+  color: #405568;
+
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =========================================
+   STORIES SECTION
+========================================= */
+
+.stories__section {
+  padding: 75px 0 105px;
+
+  background: #f7f5ef;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.stories__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.stories__card {
+  min-width: 0;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #dedbd3;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.stories__card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(23, 57, 81, 0.08);
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.stories__image-link {
+  display: block;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  text-decoration: none;
+}
+
+.stories__image {
+  display: block;
+
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+.stories__image-link:hover .stories__image {
+  transform: scale(1.035);
+}
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.stories__card-content {
+  min-height: 150px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 17px 18px 18px;
+}
+
+.stories__category {
+  margin: 0 0 8px;
+
+  color: #c98b32;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.stories__card-title {
+  margin: 0;
+
+  color: #153750;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* =========================================
+   READ MORE
+========================================= */
+
+.stories__link {
+  display: inline-flex;
+  align-items: center;
+
+  margin-top: auto;
+
+  color: #c98b32;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.stories__link:hover {
+  color: #153750;
+
+  transform: translateX(3px);
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.stories__pagination {
+  display: flex;
+  align-items: center;
+
+  margin-top: 28px;
+}
+
+/* =========================================
+   ANT DESIGN PAGINATION
+========================================= */
+
+.stories__pagination .ant-pagination {
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================================
+   PAGE ITEM
+========================================= */
+
+.stories__pagination .ant-pagination-item {
+  min-width: 32px;
+  height: 32px;
+
+  margin-inline-end: 7px;
+
+  background: transparent;
+
+  border: 1px solid #aaa69d;
+  border-radius: 0;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.stories__pagination .ant-pagination-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  color: #153750;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+
+  border-radius: 0;
+
+  transition: color 0.2s ease;
+}
+
+/* =========================================
+   ACTIVE PAGE
+========================================= */
+
+.stories__pagination
+  .ant-pagination-item-active {
+  background: #173951;
+
+  border-color: #173951;
+}
+
+.stories__pagination
+  .ant-pagination-item-active a {
+  color: #ffffff;
+}
+
+.stories__pagination
+  .ant-pagination-item-active:hover {
+  background: #234c68;
+
+  border-color: #234c68;
+}
+
+.stories__pagination
+  .ant-pagination-item-active:hover a {
+  color: #ffffff;
+}
+
+/* =========================================
+   PAGE HOVER
+========================================= */
+
+.stories__pagination
+  .ant-pagination-item:hover {
+  background: #ffffff;
+
+  border-color: #173951;
+}
+
+.stories__pagination
+  .ant-pagination-item:hover a {
+  color: #173951;
+}
+
+/* =========================================
+   PREVIOUS / NEXT
+========================================= */
+
+.stories__pagination
+  .ant-pagination-prev,
+.stories__pagination
+  .ant-pagination-next {
+  display: none;
+}
+
+/* =========================================
+   JUMP / ELLIPSIS
+========================================= */
+
+.stories__pagination
+  .ant-pagination-jump-prev,
+.stories__pagination
+  .ant-pagination-jump-next {
+  display: none;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .stories__hero {
+    padding: 65px 0 70px;
+  }
+
+  .stories__title {
+    font-size: clamp(48px, 7vw, 70px);
+  }
+
+  .stories__description {
+    margin-top: 28px;
+
+    font-size: 16px;
+  }
+
+  .stories__section {
+    padding: 70px 0 90px;
+  }
+
+  .stories__grid {
+    gap: 18px;
+  }
+
+  .stories__image {
+    height: 190px;
+  }
+
+  .stories__card-content {
+    min-height: 145px;
+
+    padding: 16px;
+  }
+
+  .stories__card-title {
+    font-size: 22px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+  .stories__container {
+    width: calc(100% - 32px);
+  }
+
+  .stories__hero {
+    padding: 70px 0 80px;
+  }
+
+  .stories__eyebrow {
+    margin-bottom: 22px;
+
+    font-size: 13px;
+  }
+
+  .stories__title {
+    font-size: clamp(42px, 12vw, 62px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  .stories__description {
+    max-width: 600px;
+
+    margin-top: 30px;
+
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  /* =========================================
+     GRID
+  ========================================= */
+
+  .stories__section {
+    padding: 65px 0 80px;
+  }
+
+  .stories__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* =========================================
+     IMAGE
+  ========================================= */
+
+  .stories__image {
+    height: auto;
+    aspect-ratio: 1.55 / 1;
+  }
+
+  /* =========================================
+     CARD
+  ========================================= */
+
+  .stories__card-content {
+    min-height: 145px;
+
+    padding: 17px 18px 20px;
+  }
+
+  .stories__category {
+    font-size: 11px;
+  }
+
+  .stories__card-title {
+    margin-bottom: 15px;
+
+    font-size: 25px;
+  }
+
+  .stories__link {
+    font-size: 13px;
+  }
+
+  /* =========================================
+     PAGINATION
+  ========================================= */
+
+  .stories__pagination {
+    margin-top: 26px;
+  }
+
+  .stories__pagination .ant-pagination-item {
+    min-width: 34px;
+    height: 34px;
+  }
+
+  .stories__pagination .ant-pagination-item a {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+  .stories__container {
+    width: calc(100% - 24px);
+  }
+
+  .stories__hero {
+    padding: 60px 0 70px;
+  }
+
+  .stories__title {
+    font-size: 40px;
+  }
+
+  .stories__description {
+    font-size: 16px;
+  }
+
+  .stories__section {
+    padding: 55px 0 70px;
+  }
+
+  .stories__image {
+    aspect-ratio: 1.5 / 1;
+  }
+
+  .stories__card-title {
+    font-size: 23px;
+  }
+
+  .stories__card-content {
+    min-height: 140px;
+
+    padding: 15px 16px 18px;
+  }
+
+  .stories__pagination .ant-pagination-item {
+    min-width: 32px;
+    height: 32px;
+  }
+}
